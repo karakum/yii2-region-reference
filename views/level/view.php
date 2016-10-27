@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model karakum\region\models\RegionLevel */
 
-$this->title = $model->name;
+$this->title = $model->name ?: $model->type->code;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('regions/level', 'Region Levels'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => $model->parent_id ? ($model->parent->name ?: $model->parent->type->code) : null,
             ],
             [
-                'attribute' => 'type',
+                'attribute' => 'type_id',
                 'value' => $model->type->code,
             ],
             'name',

@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'value' => $model->parent ? Html::a($model->parent->name, ['region/view', 'id' => $model->parent_id]) : null,
                 ],
                 [
-                    'attribute' => 'level',
+                    'attribute' => 'level_id',
                     'value' => $model->level->type->code,
                 ],
                 'code',
