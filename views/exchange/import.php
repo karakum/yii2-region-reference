@@ -10,7 +10,7 @@ use yii\helpers\Html;
 /* @var $model karakum\region\models\ImportForm */
 /* @var $levels karakum\region\models\RegionLevel[] */
 
-$this->title = Yii::t('regions/type', 'Regions import');
+$this->title = Yii::t('regions/import', 'Regions import');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('regions/region', 'Regions'), 'url' => ['region/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'importFile')->fileInput(['accept' => 'application/json']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('regions/type', 'Import'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('regions/import', 'Import'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

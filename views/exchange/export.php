@@ -9,7 +9,7 @@ use yii\helpers\Html;
 /* @var $model karakum\region\models\ExportForm */
 /* @var $countries karakum\region\models\Region[] */
 
-$this->title = Yii::t('regions/type', 'Regions export');
+$this->title = Yii::t('regions/export', 'Regions export');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('regions/region', 'Regions'), 'url' => ['region/index']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= $form->field($model, 'region_id')->dropDownList(ArrayHelper::map($countries, 'id', 'name')) ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('regions/type', 'Export'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('regions/export', 'Export'), ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
